@@ -20,10 +20,16 @@ dbConnection()
 app.use(express.json());
 
 setupRoutes(app);
+
 app.get('/', (req, res) => {
   res.send("Connected to server");
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`Server running on http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+// app.listen(PORT, HOST, () => {
+//   console.log(`Server running on http://${HOST}:${PORT}`);
+// });
