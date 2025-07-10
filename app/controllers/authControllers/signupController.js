@@ -5,6 +5,8 @@ import { generateToken } from "../../utils/jwtUtil.js";
 
 export const register = async (req, res) => {
   try {
+    console.log("Register.................................");
+    
     const { username, email, password } = req.body;
 
     const existingUser = await User.findOne({ email });
